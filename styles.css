@@ -24,6 +24,7 @@ header {
     height: 15vh;
     margin:auto;
     display: block;
+    text-align: center;
 }
 
 #btn-translate {
@@ -46,6 +47,7 @@ header {
     margin: auto;
     margin:auto;
     display: block;  
+    text-align: center;
 }
 
 .footer {
