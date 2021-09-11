@@ -16,6 +16,7 @@ header {
 .minions {
     margin: auto;
     display: block;
+    max-width: 65rem;
 }
 
 #txt-input {
