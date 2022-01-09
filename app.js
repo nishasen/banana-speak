@@ -10,16 +10,18 @@ var outputDiv = document.querySelector("#output");
 //var serverURL = "https://lessonfourapi.tanaypratap.repl.co/translate/yoda.json"
 var serverURL = "https://api.funtranslations.com/translate/minion.json"
 
-function getTranslationURL(text){
+const getTranslationURL = text => {
     return serverURL+"?"+"text="+text;
 }
 
-function errorHandler(error){
+const errorHandler = error => {
     console.log("Error occured", error)
     alert("Something wrong with API call and server, try again after sometimes")
 }
 
-btnTranslate.addEventListener("click", function clickEventHandler() {
+btnTranslate.addEventListener("click", clickEventHandler) 
+
+const clickEventHandler = () => {
     //outputDiv.innerText = "abcd " + txtInput.value;
     fetch(getTranslationURL(txtInput.value))
     .then(response => response.json())
@@ -29,4 +31,4 @@ btnTranslate.addEventListener("click", function clickEventHandler() {
         outputDiv.innerText = translatedText;
     })
     .catch(errorHandler)
-}) 
+}
