@@ -19,16 +19,14 @@ const errorHandler = error => {
     alert("Something wrong with API call and server, try again after sometimes")
 }
 
-btnTranslate.addEventListener("click", clickEventHandler) 
-
-const clickEventHandler = () => {
-    //outputDiv.innerText = "abcd " + txtInput.value;
-    fetch(getTranslationURL(txtInput.value))
-    .then(response => response.json())
-    .then(json => //console.log(json.contents.translated))
-    {
-        var translatedText = json.contents.translated;
-        outputDiv.innerText = translatedText;
-    })
-    .catch(errorHandler)
-}
+btnTranslate.addEventListener("click", function clickEventHandler(){
+     //outputDiv.innerText = "abcd " + txtInput.value;
+     fetch(getTranslationURL(txtInput.value))
+     .then(response => response.json())
+     .then(json => //console.log(json.contents.translated))
+     {
+         var translatedText = json.contents.translated;
+         outputDiv.innerText = translatedText;
+     })
+     .catch(errorHandler)
+}) 
