@@ -19,7 +19,7 @@ const errorHandler = error => {
     alert("Something wrong with API call and server, try again after sometimes")
 }
 
-btnTranslate.addEventListener("click", function clickEventHandler(){
+btnTranslate.addEventListener("click", () => {
      //outputDiv.innerText = "abcd " + txtInput.value;
      fetch(getTranslationURL(txtInput.value))
      .then(response => response.json())
